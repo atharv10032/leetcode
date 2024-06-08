@@ -27,11 +27,15 @@ bool isValid(string s)
                 check.pop();
             else
                 return false;
-
-            point = check.top();
+            if (check.empty())
+                point = ' ';
+            else
+                point = check.top();
         }
     }
-    return true;
+    if (check.empty())
+        return true;
+    return false;
 }
 
 int main()
